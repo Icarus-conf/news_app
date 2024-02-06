@@ -6,7 +6,7 @@ import 'package:news_app/model/article_model.dart';
 class ArticleTile extends StatelessWidget {
   static const String routeName = 'ArticleTile';
   final Article? article;
-  ArticleTile({super.key, required this.article});
+  const ArticleTile({super.key, required this.article});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class ArticleTile extends StatelessWidget {
           child: Column(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topRight: Radius.circular(12),
                   topLeft: Radius.circular(12),
                 ),
@@ -37,13 +37,12 @@ class ArticleTile extends StatelessWidget {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(25),
-                decoration: BoxDecoration(),
+                padding: const EdgeInsets.all(25),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      padding: EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: Colors.blueGrey,
                         borderRadius: BorderRadius.circular(25),
@@ -54,7 +53,7 @@ class ArticleTile extends StatelessWidget {
                         color: Colors.white,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     PoppinsText(

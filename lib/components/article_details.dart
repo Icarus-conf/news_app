@@ -6,7 +6,7 @@ class ArticleDetails extends StatelessWidget {
   static const String routeName = 'ArticleDetails';
 
   final Article? article;
-  ArticleDetails({super.key, this.article});
+  const ArticleDetails({super.key, this.article});
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,12 @@ class ArticleDetails extends StatelessWidget {
             article!.urlToImage ?? 'https://source.unsplash.com/random',
           ),
           Container(
-            padding: EdgeInsets.all(25),
+            padding: const EdgeInsets.all(25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.blueGrey,
                     borderRadius: BorderRadius.circular(25),
@@ -54,7 +54,7 @@ class ArticleDetails extends StatelessWidget {
                     text: article!.title!,
                     fontS: 18,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   PoppinsText(
@@ -67,12 +67,12 @@ class ArticleDetails extends StatelessWidget {
                     fontS: 12,
                     color: Colors.blueGrey,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   PoppinsText(
                       text: 'Description: ${article!.description!}', fontS: 12),
-                  Divider(),
+                  const Divider(),
                   PoppinsText(
                     text: article!.content!,
                     fontS: 14,

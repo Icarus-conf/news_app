@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:news_app/components/article_tile.dart';
 import 'package:news_app/components/text_format.dart';
 import 'package:news_app/model/article_model.dart';
@@ -7,7 +8,7 @@ import 'package:news_app/services/news_api.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = 'HomePage';
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
 
           return Scaffold(
             appBar: AppBar(
-              title: PoppinsText(
+              title: const PoppinsText(
                 text: 'NewsApp',
                 fontS: 24,
                 color: Colors.white,
@@ -45,7 +46,10 @@ class _HomePageState extends State<HomePage> {
         return Container(
           alignment: Alignment.center,
           color: Colors.white,
-          child: CircularProgressIndicator(),
+          child: const SpinKitSquareCircle(
+            color: Colors.blueGrey,
+            size: 50.0,
+          ),
         );
       },
     );

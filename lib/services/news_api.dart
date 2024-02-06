@@ -8,7 +8,7 @@ class NewsApi {
   Future<List<Article>> getArticle() async {
     http.Response response = await http.get(
       Uri.parse(
-          'https://newsapi.org/v2/everything?sources=bbc-news&apiKey=$apiKey'),
+          'https://newsapi.org/v2/everything?q=technology&apiKey=$apiKey'),
     );
 
     if (response.statusCode == 200) {
